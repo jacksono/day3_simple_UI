@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CodeSkulptor</title>
+<style>
+div.container {
+    margin-top: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 1200px;
+
+  }
+
+.button1 {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px 1px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2 {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+header {
+    padding: 5px;
+    color: white;
+    background-color: #062382;
+    clear: left;
+    text-align: center;
+}
+div.container2 {
+    margin-top: 10px;
+    margin-left: 80px;
+    width: 1200px;
+    height: 410px;
+    border: 1px solid gray;
+  }
+
+div.container3 {
+    width: 600px;
+    height:410px;
+    float: left;
+    overflow: auto;
+    border: 1px solid gray;
+  }
+
+  #link{
+    text-decoration: none;
+    color: red;
+
+
+  }
+footer {
+    padding: 1em;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+   <input style="float:left" class="button1" type="submit" value="SS"/>
+
+   <img src="codeskulptor.png" alt="CodeSkulptor Logo" style="width:129px;height:30px;">
+
+   <input style="float:right" class="button2" type="submit" value="VIZ MODE"/>
+   <input style="float:right" class="button2" type="submit" value="DEMOS"/>
+   <input style="float:right" class="button2" type="submit" value="DOCS"/>
+</header>
+</div>
+<div class="container2">
+
+  <div class="container3">
+  <textarea name="code" rows="28", cols="80">
+1  |   # CodeSkulptor runs Python programs in your browser.
+2  |   # Click the upper left button to run this simple demo.
+3  |
+4  |   # CodeSkulptor runs in Chrome 18+, Firefox 11+, and Safari 6+.
+5  |   # Some features may work in other browsers, but do not expect
+6  |   # full functionality.  It does NOT run in Internet Explorer.
+7  |
+8  |     import simplegui
+9  |
+10 |      message = "Welcome!"
+11 |
+12 |   # Handler for mouse click
+13 |    def click():
+14 |     global message
+15 |     message = "Good job!"
+16 |
+17 |   # Handler to draw on canvas
+18 |    def draw(canvas):
+19 |      canvas.draw_text(message, [50,112], 48, "Red")
+20 |
+21 |   # Create a frame and assign callbacks to event handlers
+22 |    frame = simplegui.create_frame("Home", 300, 200)
+23 |    frame.add_button("Click me", click)
+24 |    frame.set_draw_handler(draw)
+25 |
+26 |   # Start the frame animation
+27 |     frame.start()
+28 |
+  </textarea>
+
+
+</div>
+
+</div>
+
+<footer>CodeSkulptor was built by <a id = "link" href="http://www.cs.rice.edu/~rixner/">
+        Scott Rixner</a> and is based
+        upon <a id = "link" href="http://codemirror.net/">CodeMirror</a> and
+        <a id = "link" href="http://skulpt.org/">Skulpt</a>.</footer>
+
+</body>
+</html>
